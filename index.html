@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5; url=https://www.happytweet.net">
+    <title>Redirecting to HappyTweet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #333;
+            text-align: center;
+            animation: backgroundFade 3s infinite alternate;
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .spinner {
+            margin: 20px auto;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #764ba2;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #ffffff;
+            background-color: #764ba2;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);
+        }
+
+        a:hover {
+            background-color: #5a3e8a;
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes backgroundFade {
+            0% { background: linear-gradient(135deg, #667eea, #764ba2); }
+            100% { background: linear-gradient(135deg, #764ba2, #667eea); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://happytweet.s3.us-east-005.backblazeb2.com/logo.png" alt="HappyTweet Logo">
+        </div>
+        <h1>Welcome to Happy Tweet!</h1>
+        <p>You are being redirected to <strong>www.happytweet.net</strong>. Please wait a moment.</p>
+        <div class="spinner"></div>
+        <p>If you are not redirected automatically, <a href="https://www.happytweet.net">click here</a>.</p>
+    </div>
+</body>
+</html>
